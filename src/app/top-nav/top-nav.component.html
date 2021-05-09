@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg  ">
+  <a class="navbar-brand">
+    <span class="d-flex align-items-center">
+      <img src="./../assets/images/logo.PNG" class="ml-3 d-inline-block align-top img-fluid mr-3 pr-2" alt="Buyogo">
+    </span>
+  </a>
+  <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+    &#9776;
+  </button>
+
+
+
+  <div class="collapse navbar-collapse" [ngbCollapse]="isMenuCollapsed" id="navbarSupportedContent">
+
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item pt-1">
+        <a class="nav-link"><span class="mr-2 form-control-lg"> {{'about' | translate:locale.language}}</span></a>
+      </li>
+      <li class="nav-item pt-1">
+        <a class="nav-link"><span class="mr-2 form-control-lg"> {{'blog' | translate:locale.language}}</span></a>
+      </li>
+      <li class="nav-item pt-1">
+        <a class="nav-link"><span class="mr-2 form-control-lg"> {{'news' | translate:locale.language}}</span></a>
+      </li>
+      <li class="nav-item pt-1">
+        <a class="nav-link"><span class="mr-2 form-control-lg"> {{'content' | translate:locale.language}}</span></a>
+      </li>
+      <li class="nav-item pt-1">
+        <a class="nav-link"><span class="mr-2 form-control-lg"> {{'career' | translate:locale.language}}</span></a>
+      </li>
+      <li class="nav-item pt-1 dropdown">
+        <div ngbDropdown class="d-inline-block">
+          <button class="btn text-primary form-control-lg" id="dropdownBasic" ngbDropdownToggle>{{language}}</button>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic">
+            <button *ngFor="let item of schema" ngbDropdownItem (click)="setLocale(item.locale)">{{ item.locale.language
+              }}</button>
+          </div>
+        </div>
+      </li>
+
+
+
+    </ul>
+  </div>
+</nav>

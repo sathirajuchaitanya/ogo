@@ -1,0 +1,26 @@
+
+
+  .navbar {
+    padding: 0.4rem 1rem !important;
+  
+    .navbar-brand {
+      img {
+        height: 100px !important;
+      }
+    }
+  
+    .nav-item {
+      & .dropdown-list {
+        width: 20rem !important;
+      }
+  
+      & .nav-link {
+        cursor: pointer;
+        
+        
+      }
+    }
+  }
+  
+
+  

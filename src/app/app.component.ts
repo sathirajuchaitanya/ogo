@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import {L10N_LOCALE,L10nLocale, L10nConfig, L10N_CONFIG} from 'angular-l10n';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ogo';
+  constructor(@Inject(L10N_LOCALE) public locale:L10nLocale
+ ){
+  }
+  
 }
